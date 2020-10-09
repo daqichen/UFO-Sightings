@@ -80,10 +80,12 @@ ufo_year %>%
 # Follow-up: What about months and time-of-the-day, is there a pattern in the frequency of UFO sightings?
 
 ```{r}
-ufo$month <- month(ufo$datetime)
+ufo$month <- month(ufo$datetime, label = T)
+?month
+
 ufo %>%
   ggplot(aes(x=month,y=..count..,fill=..count..))+
   stat_count(show.legend = FALSE)+
   ggtitle("What about month, is there a pattern in the frequency of UFO sightings?")+
-  xlab("Month") + ylab("Number of Sightings")
+  xlab("Month") + ylab("Number of Sightings") #+ geom_bar(stat = "identity")
 ```
