@@ -77,4 +77,13 @@ ufo_year %>%
 
 > As the years go on, there is a general upward trend in frequency of UFO sightings. 
 
+# Follow-up: What about months and time-of-the-day, is there a pattern in the frequency of UFO sightings?
 
+```{r}
+ufo$month <- month(ufo$datetime)
+ufo %>%
+  ggplot(aes(x=month,y=..count..,fill=..count..))+
+  stat_count(show.legend = FALSE)+
+  ggtitle("What about month, is there a pattern in the frequency of UFO sightings?")+
+  xlab("Month") + ylab("Number of Sightings")
+```
