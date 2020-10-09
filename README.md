@@ -3,7 +3,7 @@
 ### Authors: Daqi Chen, Erica Spruell, Yiran Li, Brent Tompkins
 
 ## Exploratory Analysis
-Packages Used:
+#### Packages Used:
 ```r
 library(ggplot2)
 library(tidyverse)
@@ -13,7 +13,7 @@ library(mapdata)
 library(data.table)
 ```
 
-Questions to answer:
+#### Questions to answer:
 1. What is the most common shape reported in UFO sightings?
 ```r
 ufo %>%
@@ -23,7 +23,7 @@ ufo %>%
   theme(axis.text.x = element_text(angle=70, vjust=0.5))+
   xlab("Shape") + ylab("Frequency")
 ```
-*The most common shape in UFO sightings is light.*
+* The most common shape in UFO sightings is light.
 
 ![image](https://user-images.githubusercontent.com/55526292/95629032-2b4a9600-0a4d-11eb-8c16-700a79681f1b.png)
 
@@ -38,7 +38,7 @@ ufo_year %>%
   ggtitle("Is there a pattern as the years go on in frequency of UFO sightings?")+
   xlab("Year") + ylab("Number of Sightings")
 ```
-*As the years go on, there is a general upward trend in frequency of UFO sightings.*
+* As the years go on, there is a general upward trend in frequency of UFO sightings.
 
 ![image](https://user-images.githubusercontent.com/55526292/95629157-64830600-0a4d-11eb-8aba-bc9550cfc116.png)
 
