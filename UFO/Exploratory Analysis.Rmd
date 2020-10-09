@@ -66,7 +66,7 @@ ufo %>%
 ## Is there a pattern as the years go on in frequency of UFO sightings?
 
 ```{r}
-ufo$year <- year(ufo$datetime)
+ufo$year <- lubridate::year(ufo$datetime)
 ufo_year <- subset(ufo, year>1940)
 ufo_year %>%
   ggplot(aes(x=year,y=..count..,fill=..count..))+
@@ -80,12 +80,11 @@ ufo_year %>%
 # Follow-up: What about months and time-of-the-day, is there a pattern in the frequency of UFO sightings?
 
 ```{r}
-ufo$month <- month(ufo$datetime, label = T)
-?month
+ufo$month <- lubridate::month(ufo$datetime, label = T, abbr = T)
 
 ufo %>%
   ggplot(aes(x=month,y=..count..,fill=..count..))+
   stat_count(show.legend = FALSE)+
   ggtitle("What about month, is there a pattern in the frequency of UFO sightings?")+
-  xlab("Month") + ylab("Number of Sightings") #+ geom_bar(stat = "identity")
+  xlab("Month") + ylab("Number of Sightings")
 ```
