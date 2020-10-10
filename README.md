@@ -2,6 +2,12 @@
 ## STOR 320 Final Project, Written in R
 ### Authors: Daqi Chen, Erica Spruell, Yiran Li, Brent Tompkins
 
+## Progress Tracker
+- [x] Project Proposal
+- [x] Exploratory Analysis
+- [ ] Final Written Paper
+- [ ] Final Presentation
+
 ## Exploratory Analysis
 #### Packages Used:
 ```r
