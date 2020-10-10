@@ -126,6 +126,12 @@ UFOsightings %>%
 ```
 ![image](https://user-images.githubusercontent.com/55526292/95642183-d3c02080-0a74-11eb-9fd7-060e4a6542df.png)
 
+<details>
+  <summary>Summary</summary>
+  <p> We found a lot of interesting information from our initial questions. First of all we found that the state of California had by far the most UFO sightings in the United States, over twice as many as the next highest state, Washington. We found that by far the most common 'shape' reported was just a 'light' in the sky, which is not exactly a shape so that is a bit unusual.  One surprising thing is the wide range in duration of sightings, anywhere from less than a second to multiple hours, with a mean of about 4 and a half minutes. We also discovered that there was considerable increase in sightings starting in the 1990s and has trended up since then. The questions that were most helpful in creating follow-up questions were "What is the distribution of duration of UFO sightings?", "Is there a change in UFO sightings during specific seasons of the year?" and "What is the frequency of sightings by time of day?". </p>
+  <p> Our first follow up question that we further investigated was "What about months, is there a pattern in the frequency of UFO sightings?". We further investigated this question because our initial question looking at frequency by season left out a lot of the sightings and we were interested in an accurate display of sightings by time of the year. To investigate this we created a bar graph with frequency of sightings by month. This graph shows that overall the sightings are spread out across the calendar year but there is a spike in the summer months. We thought when looking at it by season that winter may have the most sightings but this analysis disproved that. This could be because people tend to spend more time outside during the summer. Our second follow up question that we further investigated was "Is there an improved way to identify a possible pattern in duration of sightings?". We wanted to further investigate duration because there was a surprisingly wide range for duration that we found from our initial question. To investigate this question we created a density graph. This graph shows that when the large duration outliers are taken away the durations are a lot more concentrated around 0.02 to 0.06 seconds. This shows us that the majority of sightings were very brief which was not obvious from our initial investigation.</p>
+</details>    
+
 
 <details>
   <summary>Next Steps</summary>
