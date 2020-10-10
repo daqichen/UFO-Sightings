@@ -23,7 +23,7 @@ library(tidyr)
 library(readxl)
 ```
 
-#### Questions to answer:
+### Questions to answer:
 ##### by Daqi Chen
 1. What is the most common shape reported in UFO sightings?
 ```r
@@ -125,6 +125,30 @@ UFOsightings %>%
   ggplot(aes(x=Time,y=..count..,fill=..count..))+ stat_count(show.legend = FALSE)+ ggtitle("Frequency of UFO Sightings by Time of Day")+ xlab("Time")+ ylab("Number of Sightings")
 ```
 ![image](https://user-images.githubusercontent.com/55526292/95642183-d3c02080-0a74-11eb-9fd7-060e4a6542df.png)
+
+### Follow-up Questions
+* What about months, is there a pattern in the frequency of UFO sightings?
+```{r}
+ufo$month <- lubridate::month(ufo$datetime, label = T, abbr = T)
+ufo %>%
+  ggplot(aes(x=month,y=..count..,fill=..count..))+
+  stat_count(show.legend = FALSE)+
+  ggtitle("What about month, is there a pattern in the frequency of UFO sightings?")+
+  xlab("Month") + ylab("Number of Sightings")
+```
+![image](https://user-images.githubusercontent.com/55526292/95642526-08cd7280-0a77-11eb-89da-4bf6359dc30a.png)
+
+
+* Is there an improved way to identify a possible pattern in duration of sightings? 
+```{r}
+UFOsightings <- fread("scrubbed.csv")
+UFOsightings$`duration (seconds)` <- as.numeric(UFOsightings$`duration (seconds)`)
+
+ggplot(UFOsightings[`duration (seconds)`<10000],aes(`duration (seconds)`))+
+         stat_density(fill="blue")+scale_x_log10()+ggtitle("UFO Duration")
+```
+![image](https://user-images.githubusercontent.com/55526292/95642758-79c15a00-0a78-11eb-94f9-825f240356b0.png)
+
 
 <details>
   <summary>Summary</summary>
